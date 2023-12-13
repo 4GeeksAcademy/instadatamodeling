@@ -43,7 +43,8 @@ class Users(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String(250), nullable=False)
     password = Column(String(250), nullable=False)
-    name = Column(String(250), nullable=False)
+    firstName = Column(String(250), nullable=False)
+    lastName = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False)
 
 class Post(Base):
@@ -82,6 +83,3 @@ class Follower(Base):
     # Relations
     users = relationship(Users)
 
-def to_dict(self):
-    return {}
-    
